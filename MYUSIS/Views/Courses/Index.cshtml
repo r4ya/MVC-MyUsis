@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MYUSIS.Models.Course>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Dersler: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Ders Kodu</th>
+                            <th>Ders Adı</th>
+                            <th>Bölüm Adı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Yürütücüsü</th>
+                            <th>Düzenle</th>
+                            <th>Detaylar</th>
+                            <th>Sil</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Ders Kodu</th>
+                            <th>Ders Adı</th>
+                            <th>Bölüm Adı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Yürütücüsü</th>
+                            <th>Düzenle</th>
+                            <th>Detaylar</th>
+                            <th>Sil</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CourseCode)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CourseName)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Department.DepartmenName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Faculty.FacultyName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Lecturer.Title) @Html.DisplayFor(modelItem => item.Lecturer.FullName)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Düzenle", "Edit", new { id = item.CourseID }, new { @class = "btn-sm btn-primary" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.CourseID }, new { @class = "btn-sm btn-warning" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Sil", "Delete", new { id = item.CourseID }, new { @class = "btn-sm btn-danger" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

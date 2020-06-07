@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <script src="~/Home/GiveMessage"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        body {
+            background-image: url('../../Dosyalar/ytubackground.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .row {
+            max-width: 60em;
+            margin: 0 auto;
+        }
+
+        .card-deck {
+            margin-top: 19px;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            box-shadow: 1px 2px 10px 1px black;
+        }
+
+        .alert {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <header>
+        <nav class="navbar navbar-light bg-light shadow-lg">
+            <a class="navbar-brand" href="/Home/Index">
+                <img src="~/Dosyalar/ytulogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                YILDIZ TEKNİK ÜNİVERSİTESİ - OTOMASYON SİSTEMİNE HOŞGELDİNİZ
+            </a>
+            @Html.Partial("_PartialPage1")
+            <p class="mb-0" style="text-align:right">
+                <i>Developed by <a href="/redirect/RamazanYavuz">Ramazan Yavuz &copy;</a></i>
+
+            </p>
+        </nav>
+    </header>
+    <div>
+        <div class="row">
+            <div class="card-deck">
+                <div class="card bg-white border-primary mb-2" style="max-width: 20rem; height: 470px;">
+                    <img src="https://image.flaticon.com/icons/svg/2636/2636258.svg" class="card-img-top" alt="..." width="200" height="200">
+                    <div class="card-body text-white bg-primary">
+                        <h5 class="card-title text-center">Admin Girişi</h5><hr />
+                        <form class="user">
+                            <div class="form-group">
+                                <input type="email" name="adminuser" class="form-control form-control-user" id="adminuser" aria-describedby="emailHelp" placeholder="Kullanıcı Adınızı Giriniz">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="adminpass" class="form-control form-control-user" id="adminpass" placeholder="Şifrenizi Giriniz">
+                            </div><hr />
+                            <a href="/Home/Admin" class="btn btn-primary btn-user btn-block" value="Give Message" onclick="GiveMessage()">
+                                Admin Girişi için Tıklayınız..
+                            </a>
+                        </form>
+                    </div>
+                </div>
+                <div class="card bg-white border-info mb-3" style="max-width: 20rem; height: 470px;">
+                    <img src="https://image.flaticon.com/icons/svg/2883/2883939.svg" class="card-img-top" alt="..." width="200" height="200">
+                    <div class="card-body text-white bg-info">
+                        <h5 class="card-title text-center">Öğretmen Girişi</h5><hr />
+                        <form class="user">
+                            <div class="form-group">
+                                <input type="email" name="ogretmenuser" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Kullanıcı Adınızı Giriniz">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="ogretmenpass" class="form-control form-control-user" id="exampleInputPassword" placeholder="Şifrenizi Giriniz">
+                            </div><hr />
+                            <a href="/Home/Ogretmen" class="btn btn-info btn-user btn-block" value="Give Message" onclick="GiveMessage()">
+                                Öğretmen Girişi için Tıklayınız..
+                            </a>
+                        </form>
+                    </div>
+                </div>
+                <div class="card bg-white border-danger mb-3" style="max-width: 20rem; height: 470px;">
+                    <img src="https://image.flaticon.com/icons/svg/2643/2643420.svg" class="card-img-top" alt="..." width="200" height="200">
+                    <div class="card-body text-white bg-danger">
+                        <h5 class="card-title text-center">Öğrenci Girişi</h5><hr />
+                        <form class="user">
+                            <div class="form-group">
+                                <input type="email" name="ogrenciuser" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Kullanıcı Adınızı Giriniz">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="ogrencipass" class="form-control form-control-user" id="exampleInputPassword" placeholder="Şifrenizi Giriniz">
+                            </div><hr />
+                            <a href="/Home/Ogrenci" class="btn btn-danger btn-user btn-block" value="Give Message" onclick="GiveMessage()">
+                                Öğrenci Girişi için Tıklayınız..
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <button style="background-color:white; margin-left: 200px;">
+                <a href="@Url.Action("DownloadFile","Home")">İçerik Dosyasını İndirmek İçin Tıklayınız..</a>
+            </button>
+
+            <button style="background-color:whitesmoke; margin-left: 40px;">
+                <a href="@Url.Action("DownloadStreamFile","Home")">İçerik Diagram Dosyasını İndirmek İçin Tıklayınız..</a>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function GetData() {
+        $.ajax({
+            type: "GET",
+            url: "/Home/Message",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json"
+        }).done(function (jsonResult) {
+
+            alert(jsonResult.GiveMessage);
+
+        }).always(function (data) {
+
+        });
+    }
+</script>

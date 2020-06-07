@@ -1,0 +1,29 @@
+﻿@model MYUSIS.Models.Programme
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageOgretmen.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Eğitim Planı Bilgilerini Görüntüleme Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Eğitim Planı Bilgileri Aşağıdaki Gibidir.</p>
+</div>
+
+<div class="card shadow mb-4" style="margin-left:25px;margin-right:25px;">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseP1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseP1">
+        <h6 class="m-0 font-weight-bold text-info">Eğitim Planı Bilgileri</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseP1">
+        <div class="card-body">
+            <div><b>Ders Adı: </b>@Html.DisplayFor(model => model.Course.CourseName)</div>
+            <div><b>Departman Adı: </b>@Html.DisplayFor(model => model.Department.DepartmenName)</div>
+            <div><b>Fakülte Adı: </b>@Html.DisplayFor(model => model.Faculty.FacultyName)</div>
+        </div>
+    </div>
+</div>
+<div class="col-md-offset-2 col-md-10" style="margin-left:15px;">
+    <a class="btn btn-warning" href="/Programmes2/Index" role="button">Geri Dön</a>
+</div>

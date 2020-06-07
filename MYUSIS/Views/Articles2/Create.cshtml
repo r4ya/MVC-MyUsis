@@ -1,0 +1,106 @@
+﻿@model MYUSIS.Models.Article
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPageOgretmen.cshtml";
+}
+
+<head>
+
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+
+    <style>
+        * {
+            font: 17px Calibri;
+        }
+
+        input {
+            padding: 7px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<script>
+    $(document).ready(function () {
+        $('input[id$=tbDate]').datepicker({
+            dateFormat: 'dd-mm-yy'			// Date Format "dd-mm-yy"
+        });
+    });
+</script>
+
+
+
+<body>
+    <div class="alert alert-success" role="alert" style="margin-left: 25px; margin-right: 25px;">
+        <p><h5 style="text-align: center;"><b>Yeni Makale Kayıt Bölümündesiniz</b></h5></p><hr />
+        <p style="text-align: center;">Yeni Makale Kayıt Edebilmeniz İçin Tüm Bilgileri Eksiksiz Giriniz..</p>
+    </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="card shadow mb-4" style="margin-right: 25px; margin-left: 25px;">
+                <a href="#collapseB1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseB1">
+                    <h6 class="m-0 font-weight-bold text-info">Blog Yazısı Bilgileri</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="collapseB1">
+                    <div class="card-body" style="margin-left: 15px; margin-right: 15px;">
+                        <div class="">
+                            <div class="col-md-12 mb-3">
+                                <label style="margin-left: 8px;">Yazı Başlığı</label>
+                                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label style="margin-left: 8px;">Yazı Özeti</label>
+                                @Html.EditorFor(model => model.Sum, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Sum, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label style="margin-left: 8px;">Yazı İçeriği</label>
+                                @Html.EditorFor(model => model.Cont, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Cont, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3" style="margin-left: 15px;">
+                                <label style="margin-left: 8px;">Paylaşım Tarihi</label>
+                                <input type='text' id='tbDate' placeholder='Paylaşım Tarihini Seçiniz' @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                                       @*@Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })*@
+                                       
+                                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-4 mb-3" style="margin-left: 28px;">
+                                <label style="margin-left: 8px;">Yazı Kategorisi</label>
+                                @Html.DropDownList("CategoryID", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-4 mb-3" style="margin-left: 28px;">
+                                <label style="margin-left: 8px;">Yazar</label>
+                                @Html.DropDownList("LecturerID", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.LecturerID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-left: 30px;">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Ekle" class="btn btn-success" />
+                    <a class="btn btn-warning" href="/Articles2/Index" role="button">Geri Dön</a>
+                </div>
+            </div>
+
+        </div>
+    }
+</body>

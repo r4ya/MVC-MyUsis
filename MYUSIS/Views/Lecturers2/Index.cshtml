@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MYUSIS.Models.Lecturer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageOgretmen.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Öğretmenler: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Ünvanı</th>
+                            <th>Adı Soyadı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Bölüm Adı</th>
+                            <th>Düzenleme</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Ünvanı</th>
+                            <th>Adı Soyadı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Bölüm Adı</th>
+                            <th>Düzenleme</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FullName)
+                                </td>
+                                @*<td>
+                                        @Html.DisplayFor(modelItem => item.UserName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Password)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mail)
+                                    </td>*@
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Faculty.FacultyName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Department.DepartmenName)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.LecturerID }, new { @class = "btn btn-warning" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

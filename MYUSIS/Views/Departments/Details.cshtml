@@ -1,0 +1,27 @@
+﻿@model MYUSIS.Models.Department
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+        <p><h5 style="text-align: center;"><b>Bölüm Bilgi Bölümündesiniz</b></h5></p><hr />
+        <p style="text-align: center;">Seçtiğiniz Bölüm Bilgileri Aşağıdaki Gibidir.</p>
+    </div>
+
+<div>
+    <div class="card" style="margin-right: 25px; margin-left:25px;">
+        <div class="card-header">
+            <b>Bölüm Adı: </b>@Html.DisplayFor(model => model.DepartmenName)<br />
+            <b>Bağlı Olduğu Fakülte Adı: </b>@Html.DisplayFor(model => model.Faculty.FacultyName)
+        </div>
+    </div>
+</div>
+<br />
+<div class="col-md-offset-2 col-md-10" style="margin-left: 15px;">
+    <button class="btn btn-warning text-white">
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.DepartmentID }, new { @class = "btn-sm btn-warning" })
+    </button>
+    <a class="btn btn-info" href="/Departments/Index" role="button">Geri Dön</a>
+</div>

@@ -1,0 +1,27 @@
+﻿@model MYUSIS.Models.StudentLogin
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageOgrenci.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Kullanıcı Bilgi Detayları Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrencinin Kullanıcı Bilgileri Aşağıdaki Gibidir.</p>
+</div>
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-danger">Öğretmen Bilgileri</h6>
+    </div>
+    <div class="card-body">
+        <div><b>Adı Soyadı: </b>@Html.DisplayFor(model => model.Student.FullName)</div>
+        <div><b>Kullanıcı Adı: </b>@Html.DisplayFor(model => model.UserName)</div><hr />
+        <div><b>Kullanıcı Mail Adresi: </b>@Html.DisplayFor(model => model.Mail)</div>
+        <div><b>Kullanıcı Şifresi: </b>@Html.DisplayFor(model => model.Password)</div>
+    </div>
+</div>
+
+<div class="col-md-offset-2 col-md-10" style="margin-left: 15px;">
+    <a class="btn btn-info" href="/StudentLogins1/Index" role="button">Geri Dön</a>
+</div>

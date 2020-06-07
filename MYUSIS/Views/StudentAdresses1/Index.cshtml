@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MYUSIS.Models.StudentAdress>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageOgrenci.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Öğrenci Adresi: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Adı Soyadı</th>
+                            <th>Telefon Numarası</th>
+                            <th>Adresi</th>
+                            <th>İlçe</th>
+                            <th>Şehir</th>
+                            <th>Posta Kodu</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Öğrenci Adı Soyadı</th>
+                            <th>Telefon Numarası</th>
+                            <th>Adresi</th>
+                            <th>İlçe</th>
+                            <th>Şehir</th>
+                            <th>Posta Kodu</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.FullName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Telephone)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Adress)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.County)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.City)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PK)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.StudentAdressID }, new { @class = "btn btn-warning" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

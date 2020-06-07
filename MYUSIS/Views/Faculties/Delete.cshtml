@@ -1,0 +1,25 @@
+﻿@model MYUSIS.Models.Faculty
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-danger" role="alert" style="margin-left: 25px; margin-right: 25px;">
+            <p><h5 style="text-align: center;"><b>Fakülte Silme Bölümündesiniz</b></h5></p><hr />
+            <p style="text-align: center;">Sileceğiniz Fakülte Bilgileri Aşağıdaki Gibidir. Fakülte Silmeniz İleride Düzeltemeyeceğiniz Hatalara Sebep Olabilir.</p>
+        </div>
+<div>
+    <dl class="dl-horizontal" style="margin-left: 25px;">
+        <h4><b>Silinecek Fakülte: </b></h4>
+        <h4>@Html.DisplayFor(model => model.FacultyName)</h4>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-offset-2 col-md-10" style="margin-left: 15px; margin-right: 25px;">
+            <input type="submit" value="Sil" class="btn btn-danger" />
+            <a class="btn btn-warning" href="/Faculties/Index" role="button">Geri Dön</a>
+        </div>
+    }
+</div>

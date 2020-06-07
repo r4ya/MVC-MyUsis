@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>YTÜ-ÖĞRETMEN</title>
+    <script src="~/Content/adminpaneli/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/adminpaneli/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/adminpaneli/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Content/adminpaneli/js/sb-admin-2.min.js"></script>
+    <script src="~/Content/adminpaneli/vendor/chart.js/Chart.min.js"></script>
+    <script src="~/Content/adminpaneli/js/demo/chart-area-demo.js"></script>
+    <script src="~/Content/adminpaneli/js/demo/chart-pie-demo.js"></script>
+    <link href="~/Content/adminpaneli/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="~/Content/adminpaneli/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTable').DataTable();
+        });
+    </script>
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Home/Page2">
+                <div class="sidebar-brand-text mx-3">YTÜ-USIS</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Okul İşlemleri
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDers" aria-expanded="true" aria-controls="collapseDers">
+                    <i class="fas fa-fw fa-book-open"></i>
+                    <span>Ders</span>
+                </a>
+                <div id="collapseDers" class="collapse" aria-labelledby="headingDers" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Ders İşlemleri:</h6>
+                        <a class="collapse-item" href="/Courses2/Index">Dersleri Görüntüle</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEgitimPlani" aria-expanded="true" aria-controls="collapseEgitimPlani">
+                    <i class="fas fa-fw fa-book"></i>
+                    <span>Eğitim Planı</span>
+                </a>
+                <div id="collapseEgitimPlani" class="collapse" aria-labelledby="headingEgitimPlani" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Eğitim Planları:</h6>
+                        <a class="collapse-item" href="/Programmes2/Index">Eğitim Planı Görüntüle</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDersislemi" aria-expanded="true" aria-controls="collapseDersislemi">
+                    <i class="fas fa-fw fa-sticky-note"></i>
+                    <span>Ders Programları</span>
+                </a>
+                <div id="collapseDersislemi" class="collapse" aria-labelledby="headingDersislemi" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Ders Programları:</h6>
+                        <a class="collapse-item" href="/StudentCourses2/Index">Öğrenci Programları</a>
+                        <a class="collapse-item" href="/LecturerCourses1/Index">Öğretmen Programları</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNotBilgileri" aria-expanded="true" aria-controls="collapseNotBilgileri">
+                    <i class="fas fa-fw fa-calculator"></i>
+                    <span>Öğrenci Not Bilgileri</span>
+                </a>
+                <div id="collapseNotBilgileri" class="collapse" aria-labelledby="headingNotBilgileri" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Not Ekle:</h6>
+                        <a class="collapse-item" href="/StudentExams2/Index">Sınav Bilgileri</a>
+                        <a class="collapse-item" href="/StudentExams2/Create">Sınav Bilgisi Ekle</a>
+                        <a class="collapse-item" href="/StudentNotes2/Index">Not Bilgileri</a>
+                        <a class="collapse-item" href="/StudentLessons2/Index">Aldığı Ders Bilgileri</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlogger" aria-expanded="true" aria-controls="collapseBlogger">
+                    <i class="fas fa-fw fa-blog"></i>
+                    <span>Blog Sayfası</span>
+                </a>
+                <div id="collapseBlogger" class="collapse" aria-labelledby="headingBlogger" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Blog Sayfası:</h6>
+                        <a class="collapse-item" href="/Articles2/Index">Blog Yazılarını Görüntüle</a>
+                        <a class="collapse-item" href="/Articles2/Create">Blog Yazısı Ekle</a>
+                    </div>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-heading">
+                Kullanıcı İşlemleri
+            </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOgrenci" aria-expanded="true" aria-controls="collapseOgrenci">
+                    <i class="fas fa-fw fa-user-friends"></i>
+                    <span>Öğrenciler</span>
+                </a>
+                <div id="collapseOgrenci" class="collapse" aria-labelledby="headingOgrenci" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Öğrenciler:</h6>
+                        <a class="collapse-item" href="/Students2/Index">Öğrencileri Görüntüle</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOgretmen" aria-expanded="true" aria-controls="collapseOgretmen">
+                    <i class="fas fa-fw fa-user-circle"></i>
+                    <span>Öğretmenler</span>
+                </a>
+                <div id="collapseOgretmen" class="collapse" aria-labelledby="headingOgretmen" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Öğretmenler:</h6>
+                        <a class="collapse-item" href="/Lecturers1/Index">Öğretmenleri Görüntüle</a>
+                        <div class="collapse-divider"></div>
+                    </div>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider">
+
+
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <h5 style="margin-left: 50px; margin-top: 15px;">
+                        <b>YILDIZ TEKNİK ÜNİVERSİTESİ OTOMASYON SİSTEMİ'NE HOŞGELDİNİZ..</b>
+                    </h5>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-info" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hoşgeldiniz</span>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="/Lecturers1/Index">
+                                    <a class="dropdown-item">
+                                        Öğretmen Sayfasına Giriş Yapıldı.(@(Session["OgretmenPageVisitedCounter"])): @(Session["OgretmenPageVisited"])
+                                    </a><hr />
+
+                                    <a class="dropdown-item">
+                                        Toplam Ziyaretçi: @(HttpContext.Current.Application["LifeTimeTotalVisitor"])
+                                    </a><hr />
+
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profil
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/Home/Logout" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Çıkış
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                <div class="container-fluid">
+
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="true" aria-controls="collapseMenu">
+                        <i class="fas fa-arrow-circle-down" style="color: darkturquoise"></i>
+                        <span style="color: darkturquoise">Menü Kısayolları</span>
+                    </a>
+                    <form class="nav-item">
+                        <div id="collapseMenu" class="collapse" aria-labelledby="headingMenu" data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <!-- Content Row -->
+                                <div class="row">
+
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card bg-gradient-info shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Anasayfa</div>
+                                                        <a href="/Home/Page2" class="btn btn-outline-light btn-icon-split">
+                                                            <span class="icon text-white-50">
+                                                                <i class="fas fa-home"></i>
+                                                            </span>
+                                                            <span class="text">Anasayfaya Dön</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card border-left-info bg-gradient-light shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Öğrenci Sınav Bilgisi</div>
+                                                        <a href="/StudentExams2/Create" class="btn btn-outline-dark btn-icon-split">
+                                                            <span class="icon text-white-50">
+                                                                <i class="fas fa-book-reader"></i>
+                                                            </span>
+                                                            <span class="text">Ekle</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card border-left-light bg-gradient-danger shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Öğretmen Ders Programı</div>
+                                                    </div>
+                                                    <a href="/LecturerCourses1/Index" class="btn btn-outline-light btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-chalkboard-teacher"></i>
+                                                        </span>
+                                                        <span class="text">Görüntüle</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card border-left-danger bg-gradient-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Blog Sayfası</div>
+                                                <div class="row no-gutters align-items-center">
+                                                    <a href="/Articles2/Index" class="btn btn-outline-light btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-blog fa-1x"></i>
+                                                        </span>
+                                                        <span class="text">Görüntüle</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+                <hr />
+                <div>
+                    @RenderBody()
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Çıkış Yapmak İstediğinizden Emin misiniz?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Güvenli Çıkış İçin Çıkış Butonuna Tıklayınız.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Vazgeç</button>
+                    <a class="btn btn-info" href="/Home/Page0">Çıkış</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

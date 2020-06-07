@@ -1,0 +1,117 @@
+﻿@model MYUSIS.Models.StudentInfo
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Kimlik Bilgileri Detaylar Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrencinin Kimlik Bilgileri Aşağıdaki Gibidir</p>
+</div>
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Harf Notu Bilgileri</h6>
+    </div>
+    <div class="card-body">
+        <div><b>Öğrenci Adı: </b>@Html.DisplayFor(model => model.Student.FullName)</div>
+        <div><b>Cinsiyeti: </b>@Html.DisplayFor(model => model.Gender)</div>
+        <div><b>Uyruğu: </b>@Html.DisplayFor(model => model.Nationality)</div>
+        <div><b>Doğum Yeri: </b>@Html.DisplayFor(model => model.BirthPlace)</div><hr />
+        <div><b>Anne Adı: </b>@Html.DisplayFor(model => model.MotherName)</div>
+        <div><b>Baba Adı: </b>@Html.DisplayFor(model => model.FatherName)</div>
+        <div><b>İlçe Adı: </b>@Html.DisplayFor(model => model.County)</div>
+        <div><b>Şehir Adı: </b>@Html.DisplayFor(model => model.City)</div>
+    </div>
+</div>
+
+
+<div class="col-md-offset-2 col-md-10" style="margin-left: 15px;">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Düzenle", "Edit", new { id = Model.StudentInfoID }, new { @class = "btn btn-warning" })
+            <a class="btn btn-info" href="/StudentInfoes/Index" role="button">Geri Dön</a>
+        </div>
+    }
+</div>
+@*
+    <body>
+        <div>
+            <h4>StudentInfo</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.MotherName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MotherName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FatherName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FatherName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.BirthPlace)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.BirthPlace)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nationality)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Nationality)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Gender)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.City)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.City)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.County)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.County)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Student.FullName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Student.FullName)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.StudentInfoID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </body>
+*@

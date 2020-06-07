@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MYUSIS.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageOgretmen.cshtml";
+}
+
+
+@foreach (var item in Model)
+{
+    <div class="row-cols-md-3">
+        <div class="card shadow mb-4" style="margin-left:25px;margin-right:25px;">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-info">@Html.DisplayFor(modelItem => item.Title) </h6>
+            </div>
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2><hr />
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Sum)</p>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.ArticleID }, new { @class = "btn-sm btn-primary" })
+                    @Html.ActionLink("Detaylar", "Details", new { id = item.ArticleID }, new { @class = "btn-sm btn-warning" })
+                    @Html.ActionLink("Sil", "Delete", new { id = item.ArticleID }, new { @class = "btn-sm btn-danger" })
+                </div>
+            </div>
+
+            <div class="card-footer" style="margin-bottom:0px;">
+                Posted on @Html.DisplayFor(modelItem => item.Date) by
+                <a href="#">@Html.DisplayFor(modelItem => item.Lecturer.Title) @Html.DisplayFor(modelItem => item.Lecturer.FullName)</a>
+            </div>
+        </div>
+    </div>
+
+}
+
+

@@ -1,0 +1,57 @@
+﻿@model MYUSIS.Models.Course
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+        <p><h5 style="text-align: center;"><b>Ders Bilgi Bölümündesiniz</b></h5></p><hr />
+        <p style="text-align: center;">Seçtiğiniz Dersin Bilgileri Aşağıdaki Gibidir.</p>
+    </div>
+	
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseCourse" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCourse">
+        <h6 class="m-0 font-weight-bold text-primary">Ders Genel Bilgileri</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseLecturer">
+        <div class="card-body">
+            <div><b>Ders Kodu: </b>@Html.DisplayFor(model => model.CourseCode)</div>
+            <div><b>Ders Adı: </b>@Html.DisplayFor(model => model.CourseName)</div>
+            <div><b>Departman Adı: </b>@Html.DisplayFor(model => model.Department.DepartmenName)</div>
+            <div><b>Fakülte Adı: </b>@Html.DisplayFor(model => model.Faculty.FacultyName)</div>
+            <div><b>Yürütücü Adı: </b>@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+        <h6 class="m-0 font-weight-bold text-primary">Ders İçerik Bilgileri</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseCardExample">
+        <div class="card-body">
+            <div><b>Ders Tipi: </b>@Html.DisplayFor(model => model.CourseType)</div>
+            <div><b>Ders Dönemi: </b>@Html.DisplayFor(model => model.Semester)</div>
+            <div><b>Ders Ön Koşulu: </b>@Html.DisplayFor(model => model.Precond)</div>
+            <div><b>Teori: </b>@Html.DisplayFor(model => model.T)</div>
+            <div><b>Uygulama: </b>@Html.DisplayFor(model => model.U)</div>
+            <div><b>Laboratuar: </b>@Html.DisplayFor(model => model.L)</div>
+            <div><b>Yerel Kredi: </b>@Html.DisplayFor(model => model.K)</div>
+            <div><b>ECTS: </b>@Html.DisplayFor(model => model.E)</div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-offset-2 col-md-10" style="margin-left: 20px; margin-bottom: 25px;">
+    <button class="btn btn-warning text-white">
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.CourseID }, new { @class = "btn-sm btn-warning" })
+    </button>
+    <a class="btn btn-info" href="/Courses/Index" role="button">Geri Dön</a>
+</div>
+
+

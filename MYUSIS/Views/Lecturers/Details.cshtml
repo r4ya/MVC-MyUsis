@@ -1,0 +1,113 @@
+﻿@model MYUSIS.Models.Lecturer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+        <p><h5 style="text-align: center;"><b>Öğretmen Bilgi Bölümündesiniz</b></h5></p><hr />
+        <p style="text-align: center;">Seçtiğiniz Öğretmenin Bilgileri Aşağıdaki Gibidir.</p>
+    </div>
+@*<h2>Details</h2>
+
+    <div>
+        <h4>Lecturer</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Mail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Mail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Department.DepartmenName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Department.DepartmenName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Faculty.FacultyName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Faculty.FacultyName)
+            </dd>
+
+        </dl>
+    </div>*@
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseLecturer" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseLecturer">
+        <h6 class="m-0 font-weight-bold text-primary">Öğretmen Genel Bilgileri</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseLecturer">
+        <div class="card-body">
+            <div><b>Ünvanı: </b>@Html.DisplayFor(model => model.Title)</div>
+            <div><b>Adı Soyadı: </b>@Html.DisplayFor(model => model.FullName)</div>
+            <div><b>Departman Adı: </b>@Html.DisplayFor(model => model.Department.DepartmenName)</div>
+            <div><b>Fakülte Adı: </b>@Html.DisplayFor(model => model.Faculty.FacultyName)</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+        <h6 class="m-0 font-weight-bold text-primary">Öğretmen Kullanıcı Bilgileri</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseCardExample">
+        <div class="card-body">
+            <div><b>Kullanıcı Adı: </b>@Html.DisplayFor(model => model.UserName)</div>
+            <div><b>Kullanıcı Şifresi: </b>@Html.DisplayFor(model => model.Password)</div>
+            <div><b>Kullanıcı Mail Adresi: </b>@Html.DisplayFor(model => model.Mail)</div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-offset-2 col-md-10" style="margin-left: 20px; margin-bottom: 15px;">
+    <button class="btn btn-warning text-white">
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.LecturerID }, new { @class = "btn-sm btn-warning" })
+    </button>
+    <a class="btn btn-info" href="/Lecturers/Index" role="button">Geri Dön</a>
+</div>

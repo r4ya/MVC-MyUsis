@@ -1,0 +1,61 @@
+﻿@model MYUSIS.Models.Day
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-danger" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Gün Silme Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Sileceğiniz Gün Bilgileri Aşağıdaki Gibidir. Gün Silmeniz İleride Düzeltemeyeceğiniz Hatalara Sebep Olabilir.</p>
+</div>
+<div>
+    <dl class="dl-horizontal" style="margin-left: 25px;">
+        <h4><b>Silinecek Gün: </b></h4>
+        <h4>@Html.DisplayFor(model => model.DayName)</h4>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-offset-2 col-md-10" style="margin-left: 15px;">
+            <input type="submit" value="Sil" class="btn btn-danger" />
+            <a class="btn btn-warning" href="/Days/Index" role="button">Geri Dön</a>
+        </div>
+    }
+</div>
+
+
+@*<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Delete</title>
+    </head>
+    <body>
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <h4>Day</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.DayName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DayName)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+        </div>
+    </body>
+    </html>*@

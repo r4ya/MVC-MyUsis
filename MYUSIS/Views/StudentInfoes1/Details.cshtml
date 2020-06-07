@@ -1,0 +1,40 @@
+﻿@model MYUSIS.Models.StudentInfo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageOgrenci.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Kimlik Bilgileri Detaylar Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrencinin Kimlik Bilgileri Aşağıdaki Gibidir</p>
+</div>
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-danger">Öğrenci Aile Bilgileri</h6>
+    </div>
+    <div class="card-body">
+        <div><b>Öğrenci Adı: </b>@Html.DisplayFor(model => model.Student.FullName)</div>
+        <div><b>Cinsiyeti: </b>@Html.DisplayFor(model => model.Gender)</div>
+        <div><b>Uyruğu: </b>@Html.DisplayFor(model => model.Nationality)</div>
+        <div><b>Doğum Yeri: </b>@Html.DisplayFor(model => model.BirthPlace)</div><hr />
+        <div><b>Anne Adı: </b>@Html.DisplayFor(model => model.MotherName)</div>
+        <div><b>Baba Adı: </b>@Html.DisplayFor(model => model.FatherName)</div>
+        <div><b>İlçe Adı: </b>@Html.DisplayFor(model => model.County)</div>
+        <div><b>Şehir Adı: </b>@Html.DisplayFor(model => model.City)</div>
+    </div>
+</div>
+
+
+<div class="col-md-offset-2 col-md-10" style="margin-left: 15px;">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-offset-2 col-md-10">
+            <a class="btn btn-info" href="/StudentInfoes/Index" role="button">Geri Dön</a>
+        </div>
+    }
+</div>

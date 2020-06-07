@@ -1,0 +1,53 @@
+﻿@model MYUSIS.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageOgretmen.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Bilgi Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrencinin Bilgileri Aşağıdaki Gibidir.</p>
+</div>
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseS1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseS1">
+        <h6 class="m-0 font-weight-bold text-primary">Öğrenci Genel Bilgileri</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseS1">
+        <div class="card-body">
+            <div><b>Adı Soyadı: </b>@Html.DisplayFor(model => model.FullName)</div>
+            <div><b>Numarası: </b>@Html.DisplayFor(model => model.Number)</div>
+            <div><b>Departman Adı: </b>@Html.DisplayFor(model => model.Department.DepartmenName)</div>
+            <div><b>Fakülte Adı: </b>@Html.DisplayFor(model => model.Faculty.FacultyName)</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <!-- Card Header - Accordion -->
+    <a href="#collapseS2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseS2">
+        <h6 class="m-0 font-weight-bold text-primary">Öğrenci Kayıt Bilgileri</h6>
+    </a>
+    <!-- Card Content - Collapse -->
+    <div class="collapse show" id="collapseS2">
+        <div class="card-body">
+            <div><b>Durumu: </b>@Html.DisplayFor(model => model.Status)</div>
+            <div><b>Danışmanı: </b>@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</div>
+            <div><b>Sınıfı: </b>@Html.DisplayFor(model => model.Class)</div>
+            <div><b>Dönemi: </b>@Html.DisplayFor(model => model.Period)</div><hr />
+            <div><b>TC Kimlik Numarası: </b>@Html.DisplayFor(model => model.TCKN)</div>
+            <div><b>Kayıt Tipi: </b>@Html.DisplayFor(model => model.RegistryType)</div>
+            <div><b>Kayıt Tarihi: </b>@Html.DisplayFor(model => model.RegistryDate)</div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group" style="margin-left: 20px;">
+    <div class="col-md-offset-2 col-md-10">
+        <a class="btn btn-info" href="/Students2/Index" role="button">Geri Dön</a>
+    </div>
+</div>

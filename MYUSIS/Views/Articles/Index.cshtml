@@ -1,0 +1,171 @@
+﻿@model IEnumerable<MYUSIS.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+
+@*<div class="container-fluid">
+        <h1 class="h3 mb-2 text-gray-800">Öğrenciler</h1>
+        <p class="mb-4">Kayıtlı Öğrenciler Aşağıdaki Tablodaki Gibidir.</p>
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Öğrenciler: </h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Yazı Başlığı</th>
+                                <th>Paylaşım Tarihi</th>
+                                <th>Yazı Kategorisi</th>
+                                <th>Yazar</th>
+                                <th>Düzenle</th>
+                                <th>Detay</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Yazı Başlığı</th>
+                                <th>Paylaşım Tarihi</th>
+                                <th>Yazı Kategorisi</th>
+                                <th>Yazar</th>
+                                <th>Düzenle</th>
+                                <th>Detay</th>
+                                <th>Sil</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Lecturer.Title) @Html.DisplayFor(modelItem => item.Lecturer.FullName)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Düzenle", "Edit", new { id = item.ArticleID }, new { @class = "btn-sm btn-primary" })
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Detaylar", "Details", new { id = item.ArticleID }, new { @class = "btn-sm btn-warning" })
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Sil", "Delete", new { id = item.ArticleID }, new { @class = "btn-sm btn-danger" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+@foreach (var item in Model)
+{
+    <div class="row-cols-md-3">
+        <div class="card shadow mb-4" style="margin-left:25px;margin-right:25px;">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">@Html.DisplayFor(modelItem => item.Title) </h6>
+            </div>
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2><hr />
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Sum)</p>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.ArticleID }, new { @class = "btn-sm btn-primary" })
+                    @Html.ActionLink("Detaylar", "Details", new { id = item.ArticleID }, new { @class = "btn-sm btn-warning" })
+                    @Html.ActionLink("Sil", "Delete", new { id = item.ArticleID }, new { @class = "btn-sm btn-danger" })
+                </div>
+            </div>
+
+            <div class="card-footer" style="margin-bottom:0px;">
+                Posted on @Html.DisplayFor(modelItem => item.Date) by
+                <a href="#">@Html.DisplayFor(modelItem => item.Lecturer.Title) @Html.DisplayFor(modelItem => item.Lecturer.FullName)</a>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cont)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lecturer.Title)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cont)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Lecturer.Title)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ArticleID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ArticleID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ArticleID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </body>
+    </html>*@

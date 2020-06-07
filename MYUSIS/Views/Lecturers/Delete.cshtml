@@ -1,0 +1,38 @@
+﻿@model MYUSIS.Models.Lecturer
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-danger" role="alert" style="margin-left: 25px; margin-right: 25px;">
+            <p><h5 style="text-align: center;"><b>Öğretmen Silme Bölümündesiniz</b></h5></p><hr />
+            <p style="text-align: center;">Sileceğiniz Öğretmen Bilgileri Aşağıdaki Gibidir</p>
+        </div>
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Öğretmen Bilgileri</h6>
+    </div>
+    <div class="card-body">
+        <div><b>Ünvanı: </b>@Html.DisplayFor(model => model.Title)</div>
+        <div><b>Adı Soyadı: </b>@Html.DisplayFor(model => model.FullName)</div>
+        <div><b>Departman Adı: </b>@Html.DisplayFor(model => model.Department.DepartmenName)</div>
+        <div><b>Fakülte Adı: </b>@Html.DisplayFor(model => model.Faculty.FacultyName)</div>
+        <div><b>Kullanıcı Adı: </b>@Html.DisplayFor(model => model.UserName)</div>
+        <div><b>Kullanıcı Şifresi: </b>@Html.DisplayFor(model => model.Password)</div>
+        <div><b>Kullanıcı Mail Adresi: </b>@Html.DisplayFor(model => model.Mail)</div>
+    </div>
+</div>
+
+<div class="col-md-offset-2 col-md-10">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-offset-2 col-md-10" style="margin-left: 10px; margin-bottom: 25px;">
+            <input type="submit" value="Sil" class="btn btn-danger" />
+            <a class="btn btn-warning" href="/Lecturers/Index" role="button">Geri Dön</a>
+        </div>
+    }
+</div>

@@ -1,0 +1,134 @@
+﻿@model MYUSIS.Models.Student
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+    <body>
+        <div class="alert alert-success" role="alert" style="margin-left: 25px; margin-right: 25px;">
+            <p><h5 style="text-align: center;"><b>Yeni Öğrenci Kayıt Bölümündesiniz</b></h5></p><hr />
+            <p style="text-align: center;">Yeni Öğrenci Kayıt Edebilmeniz İçin Tüm Bilgileri Eksiksiz Giriniz..</p>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.StudentID)
+
+                <div class="card shadow mb-4" style="margin-right: 25px; margin-left: 25px;">
+                    <a href="#collapseS1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseS1">
+                        <h6 class="m-0 font-weight-bold text-primary">Öğrenci Genel Bilgileri</h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseS1">
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="col-md-5 mb-3" style="margin-left: 25px;">
+                                    <label style="margin-left: 8px;">Adı Soyadı</label>
+                                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-5 mb-3" style="margin-left: 25px;">
+                                    <label style="margin-left: 8px;">Öğrenci Numarası</label>
+                                    @Html.EditorFor(model => model.Number, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-5 mb-3" style="margin-left: 25px;">
+                                    <label style="margin-left: 8px;">Fakülte Adı</label>
+                                    @Html.DropDownList("FacultyID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.FacultyID, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-5 mb-3" style="margin-left: 25px;">
+                                    <label style="margin-left: 8px;">Bölüm Adı</label>
+                                    @Html.DropDownList("DepartmentID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.DepartmentID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+                    <a href="#collapseS2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseS2">
+                        <h6 class="m-0 font-weight-bold text-primary">Öğrenci Kayıt Bilgileri</h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseS2">
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="col-md-5 mb-3" style="margin-left: 25px;">
+                                    <label style="margin-left: 8px;">Durumu</label>
+                                    @Html.EditorFor(model => model.Status, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-3 mb-3" style="margin-left: 15px;">
+                                    <label style="margin-left: 8px;">Danışmanı</label>
+                                    @Html.DropDownList("LecturerID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.LecturerID, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-3 mb-3" style="margin-left: 15px;">
+                                    <label style="margin-left: 8px;">Bölüm Adı</label>
+                                    @Html.DropDownList("DepartmentID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.DepartmentID, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-2 mb-3" style="margin-left: 15px;">
+                                    <label style="margin-left:8px;">Sınıfı</label>
+                                    @Html.EditorFor(model => model.Class, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Class, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-2 mb-3" style="margin-left: 15px;">
+                                    <label style="margin-left:8px;">Dönemi</label>
+                                    @Html.EditorFor(model => model.Period, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Period, "", new { @class = "text-danger" })
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-2 mb-3" style="margin-left: 15px;">
+                                    <label style="margin-left:8px;">TC Kimlik Numarası</label>
+                                    @Html.EditorFor(model => model.TCKN, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.TCKN, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-2 mb-3" style="margin-left: 15px;">
+                                    <label style="margin-left:8px;">Kayıt Tipi</label>
+                                    @Html.EditorFor(model => model.RegistryType, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.RegistryType, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-3 mb-3" style="margin-left: 15px;">
+                                    <label style="margin-left: 8px;">Kayıt Tarihi</label>
+                                    @Html.EditorFor(model => model.RegistryDate, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.RegistryDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-left: 30px;">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Ekle" class="btn btn-success" />
+                        <a class="btn btn-warning" href="/Home/OgrenciIslem" role="button">Geri Dön</a>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </body>

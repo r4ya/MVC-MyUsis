@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MYUSIS.Models.Programme>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageOgretmen.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-info">Eğitim Programı: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Ders Adı</th>
+                            <th>Bölüm Adı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Ders Adı</th>
+                            <th>Bölüm Adı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Course.CourseName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Department.DepartmenName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Faculty.FacultyName)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.ProgrammeID }, new { @class = "btn btn-warning" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,165 @@
+﻿@model MYUSIS.Models.Article
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+
+    <div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+        <!-- Card Header - Accordion -->
+        <a href="#collapseB1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseB1">
+            <h6 class="m-0 font-weight-bold text-primary">Yazı Paylaşım Bilgileri</h6>
+        </a>
+        <!-- Card Content - Collapse -->
+        <div class="collapse show" id="collapseB1">
+            <div class="card-body">
+                <div class="col-lg-8">
+                    <h1 class="">@Html.DisplayFor(model => model.Title)</h1>
+
+                    <p>Posted on @Html.DisplayFor(model => model.Date)</p>
+                    <p class="lead">
+                        by
+                        <a href="#">@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card shadow mb-4" style="margin-left:25px;margin-right:25px;">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">@Html.DisplayFor(model => model.Title) </h6>
+        </div>
+        <!-- Blog Post -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p class="card-text">
+                        @Html.DisplayFor(model => model.Cont)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" style="margin-left: 30px;">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Düzenle", "Edit", new { id = Model.ArticleID }, new { @class = "btn btn-warning" })
+            <a class="btn btn-info" href="/Articles/Index" role="button">Geri Dön</a>
+        </div>
+    </div>
+
+@*<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Bilgi Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrencinin Bilgileri Aşağıdaki Gibidir.</p>
+</div>
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+
+    <div class="collapse show" id="collapseS1">
+        <div class="card-body">
+            <div><b>Yazı Başlığı: </b>@Html.DisplayFor(model => model.Title)</div>
+            <div><b>Paylaşım Tarihi: </b>@Html.DisplayFor(model => model.Date)</div>
+            <div><b>Yazı Kategorisi: </b>@Html.DisplayFor(model => model.Category.CategoryName)</div>
+            <div><b>Yazar Adı: </b>@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</div><hr />
+            <div>
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">@Html.DisplayFor(model => model.Title) Özet Bölümü</h6>
+                    </div>
+                    <div class="card-body">
+                        @Html.DisplayFor(model => model.Sum)
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">@Html.DisplayFor(model => model.Title) Yazı İçeriği</h6>
+                    </div>
+                    <div class="card-body">
+                        @Html.DisplayFor(model => model.Cont)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="form-group" style="margin-left: 30px;">
+    <div class="col-md-offset-2 col-md-10">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ArticleID })
+        <input type="submit" value="Düzenle" class="btn btn-success" />
+        <a class="btn btn-warning" href="/Articles/Index" role="button">Geri Dön</a>
+    </div>
+</div>*@
+
+@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Details</title>
+    </head>
+    <body>
+        <div>
+            <h4>Article</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sum)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Sum)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Cont)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Cont)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Date)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Date)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Category.CategoryName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Category.CategoryName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Lecturer.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Lecturer.Title)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ArticleID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </body>
+    </html>*@

@@ -1,0 +1,36 @@
+﻿@model MYUSIS.Models.StudentLesson
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageOgretmen.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Ders Harf Notu Detaylar Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Ders Harf Notu Bilgileri Aşağıdaki Gibidir</p>
+</div>
+
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-danger">Harf Notu Bilgileri</h6>
+    </div>
+    <div class="card-body">
+        <div><b>Öğrenci Adı: </b>@Html.DisplayFor(model => model.Student.FullName)</div>
+        <div><b>Ders Adı: </b>@Html.DisplayFor(model => model.Course.CourseName)</div>
+        <div><b>Yürütücü Adı: </b>@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</div>
+        <div><b>Harf Notu: </b>@Html.DisplayFor(model => model.LetterNote)</div>
+    </div>
+</div>
+
+<div class="col-md-offset-2 col-md-10">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-offset-2 col-md-10">
+            <a class="btn btn-info" href="/StudentLessons2/Index" role="button">Geri Dön</a>
+        </div>
+    }
+</div>

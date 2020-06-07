@@ -1,0 +1,90 @@
+﻿@model IEnumerable<MYUSIS.Models.StartingTime>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="row">
+                <div class="col-2 font-weight-bold text-primary">Başlangıç Saatleri: </div>
+                <div class="col-10" style="text-align:end">
+                    <a href="/StartingTimes/Create" class="btn-sm btn-success btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span class="text">Yeni Başlangıç Saati Eklemek İçin Tıklayınız..</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Ders Başlangıç Saatleri</th>
+                            <th>Düzenleme</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Ders Başlangıç Saatleri</th>
+                            <th>Düzenleme</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.StatingTime)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Düzenle", "Edit", new { id = item.StartingTimeID }, new { @class = "btn btn-primary" })
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.StartingTimeID }, new { @class = "btn btn-warning" })
+                                    @Html.ActionLink("Sil", "Delete", new { id = item.StartingTimeID }, new { @class = "btn btn-danger" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@*<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.StatingTime)
+                </th>
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatingTime)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.StartingTimeID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.StartingTimeID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.StartingTimeID })
+                </td>
+            </tr>
+        }
+
+        </table>
+    </body>
+    </html>*@

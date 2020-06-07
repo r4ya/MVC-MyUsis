@@ -1,0 +1,103 @@
+﻿@model MYUSIS.Models.Lecturer
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="alert alert-primary" role="alert" style="margin-left: 25px; margin-right: 25px;">
+            <p><h5 style="text-align: center;"><b>Öğretmen Bilgileri Düzenleme Bölümündesiniz</b></h5></p><hr />
+            <p style="text-align: center;">Seçtiğiniz Öğretmenin Bilgilerini Düzenlemek İçin Yeni Bilgileri Eksiksiz Doldurunuz.</p>
+        </div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" style="margin-left: 25px; margin-right: 25px;">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.LecturerID)
+
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseLecturer" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseLecturer">
+                <h6 class="m-0 font-weight-bold text-primary">Öğretmen Genel Bilgileri</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseLecturer">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="col-md-5 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Ünvanı</label>
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-6 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Adı Soyadı</label>
+                            @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-5 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Fakülte Adı</label>
+                            @Html.DropDownList("FacultyID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.FacultyID, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-6 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Bölüm Adı</label>
+                            @Html.DropDownList("DepartmentID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DepartmentID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseLecturerInfo" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseLecturerInfo">
+                <h6 class="m-0 font-weight-bold text-primary">Öğretmen Kullanıcı Bilgileri</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseLecturerInfo">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Kullanıcı Adı</label>
+                            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-3 mb-3" style="margin-left: 8px;">
+                            <label style="margin-left: 8px;">Şifresi</label>
+                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-5 mb-3" style="margin-left: 8px;">
+                            <label style="margin-left: 8px;">Mail Adresi</label>
+                            @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kaydet" class="btn btn-success" />
+                <a class="btn btn-warning" href="/Lecturers/Index" role="button">Geri Dön</a>
+            </div>
+        </div>
+
+    </div>
+}
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

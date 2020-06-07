@@ -1,0 +1,161 @@
+﻿@model IEnumerable<MYUSIS.Models.StudentNote>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Öğrenci Not Ortalamaları: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Adı Soyadı</th>
+                            <th>AGNO</th>
+                            <th>A.Kredi</th>
+                            <th>YANO</th>
+                            <th>Y.Kredi</th>
+                            <th>ÇAD-YANO</th>
+                            <th>Ç-Y.Kredi</th>
+                            <th>Düzenlt</th>
+                            <th>Detaylar</th>
+                            <th>Sil</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Adı Soyadı</th>
+                            <th>AGNO</th>
+                            <th>A.Kredi</th>
+                            <th>YANO</th>
+                            <th>Y.Kredi</th>
+                            <th>ÇAD-YANO</th>
+                            <th>Ç-Y.Kredi</th>
+                            <th>Düzenlt</th>
+                            <th>Detaylar</th>
+                            <th>Sil</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Student.FullName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Agno)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AgnoKredi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Yano)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.YanoKredi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CadYano)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CadYanoKredi)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Düzenle", "Edit", new { id = item.StudentNoteID }, new { @class = "btn-sm btn-primary" })
+                                </td>
+                            <td>
+                                @Html.ActionLink("Detaylar", "Details", new { id = item.StudentNoteID }, new { @class = "btn-sm btn-warning" })
+                                </td>
+                            <td>
+                                @Html.ActionLink("Sil", "Delete", new { id = item.StudentNoteID }, new { @class = "btn-sm btn-danger" })
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Agno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgnoKredi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Yano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YanoKredi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CadYano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CadYanoKredi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student.FullName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Agno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AgnoKredi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Yano)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YanoKredi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CadYano)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CadYanoKredi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.FullName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.StudentNoteID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.StudentNoteID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.StudentNoteID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>*@

@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewBag.Title = "OgrenciIslem";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+
+<form class="nav-item"  style="text-align: center">
+    <div id="" class="" aria-labelledby="" data-parent="">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <!-- Content Row -->
+
+            <h2 style="text-align:center">ÖĞRENCİ İŞLEMLERİ KISAYOLLARI</h2>
+            <div class="row" style="margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-gradient-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">ogrenci Programları</div>
+                                    <a href="/StudentCourses/Create" class="btn btn-outline-light">
+                                        <span class="text">Ekle</span>
+                                    </a>
+                                    <a href="/StudentCourses/Index" class="btn btn-outline-light">
+                                        <span class="text">Görüntüle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-gradient-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">ogrenci Sınav Bilgileri</div>
+                                    <a href="/StudentExams/Create" class="btn btn-outline-light">
+                                        <span class="text">Ekle</span>
+                                    </a>
+                                    <a href="/StudentExams/Index" class="btn btn-outline-light">
+                                        <span class="text">Görüntüle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-gradient-light shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">ogrenci Not Ortalamaları</div>
+                                    <a href="/StudentNotes/Create" class="btn btn-outline-dark">
+                                        <span class="text">Ekle</span>
+                                    </a>
+                                    <a href="/StudentNotes/Index" class="btn btn-outline-dark">
+                                        <span class="text">Görüntüle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-gradient-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Aldıgı Ders Bilgileri</div>
+                                    <a href="/StudentLessons/Create" class="btn btn-outline-light">
+                                        <span class="text">Ekle</span>
+                                    </a>
+                                    <a href="/StudentLessons/Index" class="btn btn-outline-light">
+                                        <span class="text">Görüntüle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row" style="margin-left: 25px; margin-right: 25px; margin-top: 25px;">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-gradient-dark shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">ogrenci Bilgileri</div>
+                                    <a href="/Students/Create" class="btn btn-outline-light">
+                                        <span class="text">Ekle</span>
+                                    </a>
+                                    <a href="/Students/Index" class="btn btn-outline-light">
+                                        <span class="text">Görüntüle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-gradient-secondary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Kullanıcı Bilgileri</div>
+                                    <a href="/StudentLogins/Create" class="btn btn-outline-light">
+                                        <span class="text">Ekle</span>
+                                    </a>
+                                    <a href="/StudentLogis/Index" class="btn btn-outline-light">
+                                        <span class="text">Görüntüle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-gradient-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">iletisim Bilgileri</div>
+                                    <a href="/StudentAdresses/Create" class="btn btn-outline-light">
+                                        <span class="text">Ekle</span>
+                                    </a>
+                                    <a href="/StudentAdresses/Index" class="btn btn-outline-light">
+                                        <span class="text">Görüntüle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card bg-gradient-danger shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-white text-uppercase mb-1">Aile iletisim Bilgileri</div>
+                                    <a href="/FamilyAdresses/Create" class="btn btn-outline-light">
+                                        <span class="text">Ekle</span>
+                                    </a>
+                                    <a href="/FamilyAdresses/Index" class="btn btn-outline-light">
+                                        <span class="text">Görüntüle</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

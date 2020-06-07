@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="usisModelStoreContainer" CdmEntityContainer="usis">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="usisModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="usisModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Sum" ColumnName="Sum" />
+          <ScalarProperty Name="Cont" ColumnName="Cont" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="usisModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="usisModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="CourseCode" ColumnName="CourseCode" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Semester" ColumnName="Semester" />
+          <ScalarProperty Name="CourseType" ColumnName="CourseType" />
+          <ScalarProperty Name="T" ColumnName="T" />
+          <ScalarProperty Name="U" ColumnName="U" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="K" ColumnName="K" />
+          <ScalarProperty Name="E" ColumnName="E" />
+          <ScalarProperty Name="Precond" ColumnName="Precond" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Days">
+      <EntityTypeMapping TypeName="usisModel.Day">
+        <MappingFragment StoreEntitySet="Day">
+          <ScalarProperty Name="DayID" ColumnName="DayID" />
+          <ScalarProperty Name="DayName" ColumnName="DayName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="usisModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="DepartmenName" ColumnName="DepartmenName" />
+          <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Faculties">
+      <EntityTypeMapping TypeName="usisModel.Faculty">
+        <MappingFragment StoreEntitySet="Faculty">
+          <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+          <ScalarProperty Name="FacultyName" ColumnName="FacultyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FamilyAdresses">
+      <EntityTypeMapping TypeName="usisModel.FamilyAdress">
+        <MappingFragment StoreEntitySet="FamilyAdresses">
+          <ScalarProperty Name="FamilyAdressID" ColumnName="FamilyAdressID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="PK" ColumnName="PK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinishTimes">
+      <EntityTypeMapping TypeName="usisModel.FinishTime">
+        <MappingFragment StoreEntitySet="FinishTime">
+          <ScalarProperty Name="FinishTimeID" ColumnName="FinishTimeID" />
+          <ScalarProperty Name="FinishTime1" ColumnName="FinishTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lecturers">
+      <EntityTypeMapping TypeName="usisModel.Lecturer">
+        <MappingFragment StoreEntitySet="Lecturer">
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LecturerCourses">
+      <EntityTypeMapping TypeName="usisModel.LecturerCourse">
+        <MappingFragment StoreEntitySet="LecturerCourse">
+          <ScalarProperty Name="LecturerCourseID" ColumnName="LecturerCourseID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+          <ScalarProperty Name="DayID" ColumnName="DayID" />
+          <ScalarProperty Name="StartingTimeID" ColumnName="StartingTimeID" />
+          <ScalarProperty Name="FinishTimeID" ColumnName="FinishTimeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programmes">
+      <EntityTypeMapping TypeName="usisModel.Programme">
+        <MappingFragment StoreEntitySet="Programme">
+          <ScalarProperty Name="ProgrammeID" ColumnName="ProgrammeID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StartingTimes">
+      <EntityTypeMapping TypeName="usisModel.StartingTime">
+        <MappingFragment StoreEntitySet="StartingTime">
+          <ScalarProperty Name="StartingTimeID" ColumnName="StartingTimeID" />
+          <ScalarProperty Name="StatingTime" ColumnName="StatingTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="usisModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="FacultyID" ColumnName="FacultyID" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TCKN" ColumnName="TCKN" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="RegistryType" ColumnName="RegistryType" />
+          <ScalarProperty Name="RegistryDate" ColumnName="RegistryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentAdresses">
+      <EntityTypeMapping TypeName="usisModel.StudentAdress">
+        <MappingFragment StoreEntitySet="StudentAdresses">
+          <ScalarProperty Name="StudentAdressID" ColumnName="StudentAdressID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="PK" ColumnName="PK" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentCourses">
+      <EntityTypeMapping TypeName="usisModel.StudentCourse">
+        <MappingFragment StoreEntitySet="StudentCourse">
+          <ScalarProperty Name="StudentCourseID" ColumnName="StudentCourseID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="Classroom" ColumnName="Classroom" />
+          <ScalarProperty Name="DayID" ColumnName="DayID" />
+          <ScalarProperty Name="StartingTimeID" ColumnName="StartingTimeID" />
+          <ScalarProperty Name="FinishTimeID" ColumnName="FinishTimeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentExams">
+      <EntityTypeMapping TypeName="usisModel.StudentExam">
+        <MappingFragment StoreEntitySet="StudentExam">
+          <ScalarProperty Name="StudentExamID" ColumnName="StudentExamID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="ExamOne" ColumnName="ExamOne" />
+          <ScalarProperty Name="ExamTwo" ColumnName="ExamTwo" />
+          <ScalarProperty Name="ExamFinal" ColumnName="ExamFinal" />
+          <ScalarProperty Name="Homework" ColumnName="Homework" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentInfoes">
+      <EntityTypeMapping TypeName="usisModel.StudentInfo">
+        <MappingFragment StoreEntitySet="StudentInfo">
+          <ScalarProperty Name="StudentInfoID" ColumnName="StudentInfoID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentLessons">
+      <EntityTypeMapping TypeName="usisModel.StudentLesson">
+        <MappingFragment StoreEntitySet="StudentLesson">
+          <ScalarProperty Name="StudentLesson1" ColumnName="StudentLesson" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="LetterNote" ColumnName="LetterNote" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentLogins">
+      <EntityTypeMapping TypeName="usisModel.StudentLogin">
+        <MappingFragment StoreEntitySet="StudentLogin">
+          <ScalarProperty Name="StudentLoginID" ColumnName="StudentLoginID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentNotes">
+      <EntityTypeMapping TypeName="usisModel.StudentNote">
+        <MappingFragment StoreEntitySet="StudentNote">
+          <ScalarProperty Name="StudentNoteID" ColumnName="StudentNoteID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Agno" ColumnName="Agno" />
+          <ScalarProperty Name="AgnoKredi" ColumnName="AgnoKredi" />
+          <ScalarProperty Name="Yano" ColumnName="Yano" />
+          <ScalarProperty Name="YanoKredi" ColumnName="YanoKredi" />
+          <ScalarProperty Name="CadYano" ColumnName="CadYano" />
+          <ScalarProperty Name="CadYanoKredi" ColumnName="CadYanoKredi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="usisModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="usisModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="usisModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="usisModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="usisModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="usisModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="usisModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="usisModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="usisModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="usisModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,121 @@
+﻿@model MYUSIS.Models.StudentExam
+
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Not Bilgileri Detaylar Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrencinin Not Bilgilerinin Detayları Aşağıdaki Gibidir.</p>
+</div>
+
+
+
+<body>
+    <div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+        <!-- Card Header - Accordion -->
+        <a href="#collapseCourse" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCourse">
+            <h6 class="m-0 font-weight-bold text-primary">Ders Genel Bilgileri</h6>
+        </a>
+        <!-- Card Content - Collapse -->
+        <div class="collapse show" id="collapseLecturer">
+            <div class="card-body">
+                <div><b>Öğrenci Adı: </b> @Html.DisplayFor(model => model.Student.FullName)</div>
+                <div><b>Ders Adı: </b>@Html.DisplayFor(model => model.Course.CourseName)</div>
+                <div><b>Yürütücü Adı: </b>@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</div><hr />
+
+                <div><b>1. Vize Notu: </b>@Html.DisplayFor(model => model.ExamOne)</div>
+                <div><b>2. Vize Notu: </b>@Html.DisplayFor(model => model.ExamTwo)</div>
+                <div><b>Ödev Notu: </b>@Html.DisplayFor(model => model.Homework)</div>
+                <div><b>Proje Notu: </b>@Html.DisplayFor(model => model.Project)</div>
+                <div><b>Final Notu: </b>@Html.DisplayFor(model => model.ExamFinal)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-offset-2 col-md-10" style="margin-left: 20px; margin-bottom: 25px;">
+        <button class="btn btn-warning text-white">
+            @Html.ActionLink("Düzenle", "Edit", new { id = Model.StudentExamID }, new { @class = "btn-sm btn-warning" })
+        </button>
+        <a class="btn btn-info" href="/StudentExams/Index" role="button">Geri Dön</a>
+    </div>
+
+    @*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.StudentExamID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
+</body>
+
+
+@*<div>
+    <h4>StudentExam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExamFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Homework)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Homework)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Course.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lecturer.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lecturer.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.FullName)
+        </dd>
+
+    </dl>
+</div>*@

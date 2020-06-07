@@ -1,0 +1,85 @@
+﻿@model IEnumerable<MYUSIS.Models.StudentInfo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageOgrenci.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Öğrenci Bilgileri: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Öğrenci Adı</th>
+                            <th>Cinsiyeti</th>
+                            <th>Uyruğu</th>
+                            <th>Doğum Yeri</th>
+                            <th>Anne Adı</th>
+                            <th>Baba Adı</th>
+                            <th>İlçe Adı</th>
+                            <th>Şehir Adı</th>
+                            <th>Düzenle</th>
+                            <th>Detaylar</th>
+                            <th>Sil</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Öğrenci Adı</th>
+                            <th>Cinsiyeti</th>
+                            <th>Uyruğu</th>
+                            <th>Doğum Yeri</th>
+                            <th>Anne Adı</th>
+                            <th>Baba Adı</th>
+                            <th>İlçe Adı</th>
+                            <th>Şehir Adı</th>
+                            <th>Düzenle</th>
+                            <th>Detaylar</th>
+                            <th>Sil</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.FullName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Gender)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nationality)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BirthPlace)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MotherName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FatherName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.City)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.County)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.StudentInfoID }, new { @class = "btn-sm btn-warning" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,131 @@
+﻿@model MYUSIS.Models.Course
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-success" role="alert" style="margin-left: 25px; margin-right: 25px;">
+            <p><h5 style="text-align: center;"><b>Yeni Ders Kayıt Bölümündesiniz</b></h5></p><hr />
+            <p style="text-align: center;">Yeni Ders Kayıt Edebilmeniz İçin Tüm Bilgileri Eksiksiz Giriniz..</p>
+        </div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" style="margin-left: 25px; margin-right: 25px;">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseC1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseC1">
+                <h6 class="m-0 font-weight-bold text-primary">Ders Genel Bilgileri</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseC1">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Ders Kodu</label>
+                            @Html.EditorFor(model => model.CourseCode, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CourseCode, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-4 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Ders Adı</label>
+                            @Html.EditorFor(model => model.CourseName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CourseName, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-4 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Yürütücü Adı</label>
+                            @Html.DropDownList("LecturerID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.LecturerID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-5 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Bölüm Adı</label>
+                            @Html.DropDownList("DepartmentID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DepartmentID, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-6 mb-3" style="margin-left: 28px;">
+                            <label style="margin-left: 8px;">Fakülte Adı</label>
+                            @Html.DropDownList("FacultyID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.FacultyID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseC2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseC2">
+                <h6 class="m-0 font-weight-bold text-primary">Ders İçerik Bilgileri</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseC2">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Ders Dönemi</label>
+                            @Html.EditorFor(model => model.Semester, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Semester, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-4 mb-3" style="margin-left: 8px;">
+                            <label style="margin-left: 8px;">Ders Tipi</label>
+                            @Html.EditorFor(model => model.CourseType, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CourseType, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-4 mb-3" style="margin-left: 8px;">
+                            <label style="margin-left: 8px;">Ders Ön Koşulu</label>
+                            @Html.EditorFor(model => model.Precond, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Precond, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 mb-3" style="margin-left: 23px;">
+                            <label style="margin-left: 8px;">Teori</label>
+                            @Html.EditorFor(model => model.T, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.T, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-2 mb-3" style="margin-left: 23px;">
+                            <label style="margin-left: 8px;">Uygulama</label>
+                            @Html.EditorFor(model => model.U, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.U, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-2 mb-3" style="margin-left: 23px;">
+                            <label style="margin-left: 8px;">Laboratuar</label>
+                            @Html.EditorFor(model => model.L, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.L, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-2 mb-3" style="margin-left: 23px;">
+                            <label style="margin-left: 8px;">Yerel Kredi</label>
+                            @Html.EditorFor(model => model.K, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.K, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-2 mb-3" style="margin-left: 23px;">
+                            <label style="margin-left: 8px;">ECTS</label>
+                            @Html.EditorFor(model => model.E, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.E, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Ekle" class="btn btn-success" />
+                <a class="btn btn-warning" href="/Courses/Index" role="button">Geri Dön</a>
+            </div>
+        </div>
+    </div>
+}

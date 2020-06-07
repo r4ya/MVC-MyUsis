@@ -1,0 +1,30 @@
+﻿@model MYUSIS.Models.LecturerCourse
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageOgretmen.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğretmen Ders Bilgi Detayları Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğretmenin Ders Bilgileri Aşağıdaki Gibidir.</p>
+</div>
+
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Öğretmen Ders Bilgileri</h6>
+    </div>
+    <div class="card-body">
+        <div><b>Öğretmen Adı: </b>@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</div>
+        <div><b>Ders Adı: </b>@Html.DisplayFor(model => model.Course.CourseName)</div>
+
+        <div><b>Derslik: </b>@Html.DisplayFor(model => model.Classroom)</div>
+        <div><b>Ders Günü: </b>@Html.DisplayFor(model => model.Day.DayName)</div>
+        <div><b>Ders Başlangıç Saati: </b>@Html.DisplayFor(model => model.StartingTime.StatingTime)</div>
+        <div><b>Ders Bitiş Saati: </b>@Html.DisplayFor(model => model.FinishTime.FinishTime1)</div>
+    </div>
+</div>
+
+<div class="col-md-offset-2 col-md-10" style="margin-left: 15px;">
+    <a class="btn btn-info" href="/LecturerCourses1/Index" role="button">Geri Dön</a>
+</div>

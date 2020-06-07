@@ -1,0 +1,31 @@
+﻿@model MYUSIS.Models.FamilyAdress
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageOgrenci.cshtml";
+}
+
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Ailesi Adres Bilgisi Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrenci Ailesi Adres Bilgisi Aşağıdaki Gibidir.</p>
+</div>
+
+<div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Öğrenci Adres Bilgileri</h6>
+        </div>
+        <div class="card-body">
+            <div><b>Öğrenci Adı Soyadı: </b>@Html.DisplayFor(model => model.Student.FullName)</div>
+            <div><b>Aile Telefon Numarası: </b>@Html.DisplayFor(model => model.Telephone)</div>
+            <div><b>Aile Adresi: </b>@Html.DisplayFor(model => model.Adress)</div>
+            <div><b>Posta Kodu: </b>@Html.DisplayFor(model => model.PK)</div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="col-md-offset-2 col-md-10">
+    <a class="btn btn-info" href="/FamilyAdresses1/Index" role="button">Geri Dön</a>
+</div>
+

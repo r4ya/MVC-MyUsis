@@ -1,0 +1,152 @@
+﻿@model MYUSIS.Models.LecturerCourse
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+
+<div class="alert alert-primary" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Ders Kaydı Düzenleme Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrenci Ders Kaydını Düzenlemek İçin Tüm Bilgileri Eksiksiz Giriniz..</p>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" style="margin-left: 25px; margin-right: 25px;">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.LecturerCourseID)
+        <div class="card shadow mb-4">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseC1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseC1">
+                <h6 class="m-0 font-weight-bold text-primary">Öğrenci Ders Genel Bilgileri</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseC1">
+                <div class="card-body">
+
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Öğretmen Adı</label>
+                            @Html.DropDownList("LecturerID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.LecturerID, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-4 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Ders Adı</label>
+                            @Html.DropDownList("CourseID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-4 mb-3" style="margin-left: 15px;">
+                            <label style="margin-left: 8px;">Derslik</label>
+                            @Html.EditorFor(model => model.Classroom, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Classroom, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3" style="margin-left: 10px;">
+                            <label style="margin-left: 8px;">Başlangıç Saati</label>
+                            @Html.DropDownList("StartingTimeID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.StartingTimeID, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-3 mb-3" style="margin-left: 10px;">
+                            <label style="margin-left: 8px;">Bitiş Saati</label>
+                            @Html.DropDownList("FinishTimeID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.FinishTimeID, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-md-4 mb-3" style="margin-left: 10px;">
+                            <label style="margin-left: 8px;">Gün İsmi</label>
+                            @Html.DropDownList("DayID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DayID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+                <a class="btn btn-warning" href="/LecturerCourses/Index" role="button">Geri Dön</a>
+            </div>
+        </div>
+    </div>
+}
+
+
+@*<h2>Edit</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>LecturerCourse</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.LecturerCourseID)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.CourseID, "CourseID", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("CourseID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LecturerID, "LecturerID", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("LecturerID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.LecturerID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Classroom, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Classroom, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Classroom, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DayID, "DayID", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("DayID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DayID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.StartingTimeID, "StartingTimeID", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("StartingTimeID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.StartingTimeID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.FinishTimeID, "FinishTimeID", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("FinishTimeID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.FinishTimeID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

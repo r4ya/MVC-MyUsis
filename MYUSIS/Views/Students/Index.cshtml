@@ -1,0 +1,181 @@
+﻿@model IEnumerable<MYUSIS.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Öğrenciler: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Adı Soyadı</th>
+                            <th>Numarası</th>
+                            <th>Bölüm Adı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Danışmanı</th>
+                            <th>Düzenle</th>
+                            <th>Detay</th>
+                            <th>Sil</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Adı Soyadı</th>
+                            <th>Numarası</th>
+                            <th>Bölüm Adı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Danışmanı</th>
+                            <th>Düzenle</th>
+                            <th>Detay</th>
+                            <th>Sil</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FullName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Number)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Faculty.FacultyName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Department.DepartmenName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Lecturer.Title) @Html.DisplayFor(modelItem => item.Lecturer.FullName)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Düzenle", "Edit", new { id = item.StudentID }, new { @class = "btn-sm btn-primary" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.StudentID }, new { @class = "btn-sm btn-warning" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Sil", "Delete", new { id = item.StudentID }, new { @class = "btn-sm btn-danger" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TCKN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Period)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistryType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegistryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department.DepartmenName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty.FacultyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lecturer.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Programme.ProgrammeID)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TCKN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Class)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Period)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistryType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RegistryDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department.DepartmenName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Faculty.FacultyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lecturer.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Programme.ProgrammeID)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.StudentID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.StudentID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.StudentID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>*@

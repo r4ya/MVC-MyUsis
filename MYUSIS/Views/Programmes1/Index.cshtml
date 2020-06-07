@@ -1,0 +1,96 @@
+﻿@model IEnumerable<MYUSIS.Models.Programme>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageOgrenci.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Eğitim Programı: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Ders Adı</th>
+                            <th>Bölüm Adı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Düzenleme</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Ders Adı</th>
+                            <th>Bölüm Adı</th>
+                            <th>Fakülte Adı</th>
+                            <th>Düzenleme</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Course.CourseName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Department.DepartmenName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Faculty.FacultyName)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.ProgrammeID }, new { @class = "btn btn-warning" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Course.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department.DepartmenName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty.FacultyName)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.DepartmenName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faculty.FacultyName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ProgrammeID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ProgrammeID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ProgrammeID })
+            </td>
+        </tr>
+    }
+
+    </table>*@

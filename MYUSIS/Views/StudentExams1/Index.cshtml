@@ -1,0 +1,81 @@
+﻿@model IEnumerable<MYUSIS.Models.StudentExam>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageOgrenci.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Öğrenci Sınav Bilgileri: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table-sm table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Adı Soyadı</th>
+                            <th>Ders Adı</th>
+                            <th>Yürütücü</th>
+                            <th>1.Vize</th>
+                            <th>2.Vize</th>
+                            <th>Ödev</th>
+                            <th>Proje</th>
+                            <th>Final</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Adı Soyadı</th>
+                            <th>Ders Adı</th>
+                            <th>Yürütücü</th>
+                            <th>1.Vize</th>
+                            <th>2.Vize</th>
+                            <th>Ödev</th>
+                            <th>Proje</th>
+                            <th>Final</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.FullName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Course.CourseName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Lecturer.Title) @Html.DisplayFor(modelItem => item.Lecturer.FullName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ExamOne)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ExamTwo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Homework)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Project)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ExamFinal)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.StudentExamID }, new { @class = "btn-sm btn-warning" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

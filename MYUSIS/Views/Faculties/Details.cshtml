@@ -1,0 +1,25 @@
+﻿@model MYUSIS.Models.Faculty
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+        <p><h5 style="text-align: center;"><b>Fakülte Bilgi Bölümündesiniz</b></h5></p><hr />
+        <p style="text-align: center;">Seçtiğiniz Fakültenin Bilgileri Aşağıdaki Gibidir.</p>
+    </div>
+	
+<div>
+    <div class="card" style="margin-left: 25px; margin-right: 25px;">
+        <div class="card-header">
+            <b>Fakülte Adı: </b>@Html.DisplayFor(model => model.FacultyName)
+        </div>
+    </div>
+</div>
+<br />
+<div class="col-md-offset-2 col-md-10" style="margin-left: 15px; margin-right: 25px;">
+    <button class="btn btn-warning text-white">
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.FacultyID }, new { @class = "btn-sm btn-warning" })
+    </button>
+    <a class="btn btn-info" href="/Faculties/Index" role="button">Geri Dön</a>
+</div>

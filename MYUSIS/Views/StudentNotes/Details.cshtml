@@ -1,0 +1,108 @@
+﻿@model MYUSIS.Models.StudentNote
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Not Ortalaması Detaylar Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Öğrenci Not Ortalaması Detayları Aşağıdaki Gibidir</p>
+</div>
+
+<div class="card shadow mb-4" style="margin-right:25px;margin-left:25px;">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Öğrenci Not Ortalaması Bilgileri</h6>
+    </div>
+    <div class="card-body">
+        <div><b>Adı Soyadı: </b>@Html.DisplayFor(model => model.Student.FullName)</div>
+        <div><b>AGNO/Kredi: </b>@Html.DisplayFor(model => model.Agno)/<b>@Html.DisplayFor(model => model.AgnoKredi)</b></div>
+        <div><b>YANO/Kredi: </b>@Html.DisplayFor(model => model.Yano)/<b>@Html.DisplayFor(model => model.YanoKredi)</b></div>
+        <div><b>ÇAD YANO/Kredi: </b>@Html.DisplayFor(model => model.CadYano)/<b>@Html.DisplayFor(model => model.CadYanoKredi)</b></div>
+    </div>
+</div>
+
+
+<div class="col-md-offset-2 col-md-10" style="margin-left:20px;">
+
+    <button class="btn btn-warning text-white">
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.StudentNoteID }, new { @class = "btn-sm btn-warning" })
+    </button>
+    <a class="btn btn-info" href="/StudentNotes/Index" role="button">Geri Dön</a>
+
+</div>
+
+
+@*<div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Sil" class="btn btn-danger" />
+        <a class="btn btn-warning" href="/StudentNotes/Index" role="button">Geri Dön</a>
+    </div>*@
+
+@*<body>
+        <div>
+            <h4>StudentNote</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Agno)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Agno)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.AgnoKredi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AgnoKredi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Yano)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Yano)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.YanoKredi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.YanoKredi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CadYano)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CadYano)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CadYanoKredi)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CadYanoKredi)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Student.FullName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Student.FullName)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.StudentNoteID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </body>*@
+

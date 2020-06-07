@@ -1,0 +1,14 @@
+﻿
+@{
+    var menus = new List<string>();
+
+    menus.Add("Index");
+    menus.Add("Ogrenci");
+    menus.Add("Admin");
+    menus.Add("Ogretmen");
+}
+
+@foreach (var item in menus)
+{
+    <div><a href="~/Home/@item">@item</a></div>
+}

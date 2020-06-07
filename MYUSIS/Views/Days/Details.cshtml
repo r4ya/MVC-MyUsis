@@ -1,0 +1,53 @@
+﻿@model MYUSIS.Models.Day
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Gün Bilgisi Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Gün Bilgileri Aşağıdaki Gibidir.</p>
+</div>
+
+<div style="margin-left: 25px; margin-right: 25px;">
+    <div class="card">
+        <div class="card-header">
+            <b>@Html.DisplayFor(model => model.DayName)</b>
+        </div>
+    </div>
+</div>
+<br />
+<div class="col-md-offset-2 col-md-10" style="margin-left: 15px;">
+    <button class="btn btn-warning text-white">
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.DayID }, new { @class = "btn-sm btn-warning" })
+    </button>
+    <a class="btn btn-info" href="/Days/Index" role="button">Geri Dön</a>
+</div>
+
+@*<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Day</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DayName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DayName)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.DayID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>*@

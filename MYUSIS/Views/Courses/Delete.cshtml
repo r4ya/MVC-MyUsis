@@ -1,0 +1,44 @@
+﻿@model MYUSIS.Models.Course
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-danger" role="alert" style="margin-left: 25px; margin-right: 25px;">
+            <p><h5 style="text-align: center;"><b>Ders Silme Bölümündesiniz</b></h5></p><hr />
+            <p style="text-align: center;">Sileceğiniz Ders Bilgileri Aşağıdaki Gibidir</p>
+        </div>
+		
+<div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Ders Bilgileri</h6>
+    </div>
+    <div class="card-body">
+        <div><b>Ders Kodu: </b>@Html.DisplayFor(model => model.CourseCode)</div>
+        <div><b>Ders Adı: </b>@Html.DisplayFor(model => model.CourseName)</div>
+        <div><b>Departman Adı: </b>@Html.DisplayFor(model => model.Department.DepartmenName)</div>
+        <div><b>Fakülte Adı: </b>@Html.DisplayFor(model => model.Faculty.FacultyName)</div>
+        <div><b>Yürütücü Adı: </b>@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</div><hr />
+        <div><b>Ders Tipi: </b>@Html.DisplayFor(model => model.CourseType)</div>
+        <div><b>Ders Dönemi: </b>@Html.DisplayFor(model => model.Semester)</div>
+        <div><b>Ders Ön Koşulu: </b>@Html.DisplayFor(model => model.Precond)</div>
+        <div><b>Teori: </b>@Html.DisplayFor(model => model.T)</div>
+        <div><b>Uygulama: </b>@Html.DisplayFor(model => model.U)</div>
+        <div><b>Laboratuar: </b>@Html.DisplayFor(model => model.L)</div>
+        <div><b>Yerel Kredi: </b>@Html.DisplayFor(model => model.K)</div>
+        <div><b>ECTS: </b>@Html.DisplayFor(model => model.E)</div>
+    </div>
+</div>
+
+<div class="col-md-offset-2 col-md-10">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-offset-2 col-md-10" style="margin-left: 15px; margin-bottom: 25px;">
+            <input type="submit" value="Sil" class="btn btn-danger" />
+            <a class="btn btn-warning" href="/Courses/Index" role="button">Geri Dön</a>
+        </div>
+    }
+</div>

@@ -1,0 +1,152 @@
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\MYUSIS.dll.config
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\MYUSIS.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\MYUSIS.pdb
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\csc.exe
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\csc.exe.config
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\csc.rsp
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\csi.exe
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\csi.exe.config
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\csi.rsp
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.AppContext.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Console.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.IO.Compression.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Net.Http.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Net.Sockets.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.ValueTuple.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\vbc.exe
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\vbc.exe.config
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\vbc.rsp
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\VBCSCompiler.exe
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\EntityFramework.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\EntityFramework.SqlServer.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Helpers.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Mvc.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Razor.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Webpages.Deployment.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Webpages.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Webpages.Razor.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\EntityFramework.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\EntityFramework.SqlServer.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Razor.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Webpages.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Webpages.Deployment.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Webpages.Razor.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Helpers.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\System.Web.Mvc.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\obj\Debug\MYUSIS.csprojAssemblyReference.cache
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\obj\Debug\MYUSIS.csproj.CoreCompileInputs.cache
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\obj\Debug\MYUSIS.csproj.CopyComplete
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\obj\Debug\MYUSIS.dll
+C:\Users\ryavu\Desktop\MVC\MYUSIS\MYUSIS\obj\Debug\MYUSIS.pdb
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\MYUSIS.dll.config
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\MYUSIS.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\MYUSIS.pdb
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\csc.exe
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\csc.exe.config
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\csc.rsp
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\csi.exe
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\csi.exe.config
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\csi.rsp
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.AppContext.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Collections.Immutable.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Console.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Globalization.Calendars.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.IO.Compression.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.IO.FileSystem.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Net.Http.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Net.Sockets.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Reflection.Metadata.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.ValueTuple.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Xml.XPath.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\vbc.exe
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\vbc.exe.config
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\vbc.rsp
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\VBCSCompiler.exe
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\roslyn\VBCSCompiler.exe.config
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\EntityFramework.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\EntityFramework.SqlServer.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\Microsoft.Web.Infrastructure.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Helpers.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Mvc.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Razor.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Webpages.Deployment.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Webpages.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Webpages.Razor.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\EntityFramework.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\EntityFramework.SqlServer.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Razor.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Webpages.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Webpages.Deployment.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Webpages.Razor.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Helpers.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\System.Web.Mvc.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\obj\Debug\MYUSIS.csprojAssemblyReference.cache
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\obj\Debug\MYUSIS.csproj.CoreCompileInputs.cache
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\obj\Debug\MYUSIS.csproj.CopyComplete
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\obj\Debug\MYUSIS.dll
+E:\ytu-mevi\4) Mvc\MVC-Proje Ödevi\MYUSIS\MYUSIS\obj\Debug\MYUSIS.pdb

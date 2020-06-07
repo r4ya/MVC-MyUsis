@@ -1,0 +1,44 @@
+﻿@model MYUSIS.Models.Student
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+    <body>
+
+        <div class="alert alert-danger" role="alert" style="margin-left: 25px; margin-right: 25px;">
+            <p><h5 style="text-align: center;"><b>Öğrenci Silme Bölümündesiniz</b></h5></p><hr />
+            <p style="text-align: center;">Sileceğiniz Öğrenci Bilgileri Aşağıdaki Gibidir</p>
+        </div>
+        <div>
+            <div class="card shadow mb-4" style="margin-left: 25px; margin-right: 25px;">
+                <div class="card-body">
+                    <div><b>Adı Soyadı: </b>@Html.DisplayFor(model => model.FullName)</div>
+                    <div><b>Numarası: </b>@Html.DisplayFor(model => model.Number)</div>
+                    <div><b>Departman Adı: </b>@Html.DisplayFor(model => model.Department.DepartmenName)</div>
+                    <div><b>Fakülte Adı: </b>@Html.DisplayFor(model => model.Faculty.FacultyName)</div><hr />
+                    <div><b>Durumu: </b>@Html.DisplayFor(model => model.Status)</div>
+                    <div><b>Danışmanı: </b>@Html.DisplayFor(model => model.Lecturer.Title) @Html.DisplayFor(model => model.Lecturer.FullName)</div>
+                    <div><b>Sınıfı: </b>@Html.DisplayFor(model => model.Class)</div>
+                    <div><b>Dönemi: </b>@Html.DisplayFor(model => model.Period)</div><hr />
+                    <div><b>TC Kimlik Numarası: </b>@Html.DisplayFor(model => model.TCKN)</div>
+                    <div><b>Kayıt Tipi: </b>@Html.DisplayFor(model => model.RegistryType)</div>
+                    <div><b>Kayıt Tarihi: </b>@Html.DisplayFor(model => model.RegistryDate)</div>
+                </div>
+            </div>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group" style="margin-left: 30px;">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Sil" class="btn btn-danger" />
+                        <a class="btn btn-warning" href="/Students/Index" role="button">Geri Dön</a>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </body>

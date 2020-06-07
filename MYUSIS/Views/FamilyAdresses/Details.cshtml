@@ -1,0 +1,85 @@
+﻿@model MYUSIS.Models.FamilyAdress
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="alert alert-warning" role="alert" style="margin-left: 25px; margin-right: 25px;">
+    <p><h5 style="text-align: center;"><b>Öğrenci Ailesi Adres Bilgisi Bölümündesiniz</b></h5></p><hr />
+    <p style="text-align: center;">Seçtiğiniz Öğrenci Ailesi Adres Bilgisi Aşağıdaki Gibidir.</p>
+</div>
+
+<div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Öğrenci Adres Bilgileri</h6>
+        </div>
+        <div class="card-body">
+            <div><b>Öğrenci Adı Soyadı: </b>@Html.DisplayFor(model => model.Student.FullName)</div>
+            <div><b>Aile Telefon Numarası: </b>@Html.DisplayFor(model => model.Telephone)</div>
+            <div><b>Aile Adresi: </b>@Html.DisplayFor(model => model.Adress)</div>
+            <div><b>Posta Kodu: </b>@Html.DisplayFor(model => model.PK)</div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="col-md-offset-2 col-md-10">
+    <button class="btn btn-warning text-white">
+        @Html.ActionLink("Düzenle", "Edit", new { id = Model.FamilyAdressID }, new { @class = "btn-sm btn-warning" })
+    </button>
+    <a class="btn btn-info" href="/FamilyAdresses/Index" role="button">Geri Dön</a>
+</div>
+
+
+
+@*<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Details</title>
+    </head>
+    <body>
+        <div>
+            <h4>FamilyAdress</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Adress)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Adress)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Telephone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Telephone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PK)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PK)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Student.FullName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Student.FullName)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.FamilyAdressID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </body>
+    </html>*@

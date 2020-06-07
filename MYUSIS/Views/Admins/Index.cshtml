@@ -1,0 +1,99 @@
+﻿@model IEnumerable<MYUSIS.Models.Admin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Adminler: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Kullanıcı Adı</th>
+                            <th>Kullanıcı Şifresi</th>
+                            <th>Düzenleme</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Kullanıcı Adı</th>
+                            <th>Kullanıcı Şifresi</th>
+                            <th>Düzenleme</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Password)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Düzenle", "Edit", new { id = item.AdminID }, new { @class = "btn btn-primary" })
+                                @Html.ActionLink("Detaylar", "Details", new { id = item.AdminID }, new { @class = "btn btn-warning" })
+                                @Html.ActionLink("Sil", "Delete", new { id = item.AdminID }, new { @class = "btn btn-danger" })
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AdminID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AdminID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AdminID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>*@

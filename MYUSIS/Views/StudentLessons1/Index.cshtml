@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MYUSIS.Models.StudentLesson>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPageOgrenci.cshtml";
+}
+
+
+<div class="container-fluid">
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-danger">Dersler: </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Öğrenci Adı</th>
+                            <th>Ders Adı</th>
+                            <th>Yürütücüsü</th>
+                            <th>Harf Notu</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Öğrenci Adı</th>
+                            <th>Ders Adı</th>
+                            <th>Yürütücüsü</th>
+                            <th>Harf Notu</th>
+                            <th>Detaylar</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Student.FullName)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Course.CourseName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Lecturer.Title) @Html.DisplayFor(modelItem => item.Lecturer.FullName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LetterNote)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detaylar", "Details", new { id = item.StudentLesson1 }, new { @class = "btn-sm btn-warning" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

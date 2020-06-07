@@ -1,0 +1,40 @@
+﻿@model MYUSIS.Models.Department
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div class="alert alert-success" role="alert" style="margin-left: 25px; margin-right: 25px;">
+            <p><h5 style="text-align: center;"><b>Yeni Bölüm Kayıt Bölümündesiniz</b></h5></p><hr />
+            <p style="text-align: center;">Yeni Bölüm Kayıt Edebilmeniz İçin Tüm Bilgileri Eksiksiz Giriniz..</p>
+        </div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
+            <label class="" style="margin-left: 12px;"><b>Bölüm İsmi:</b></label>
+            <div class="col-md-12">
+                @Html.EditorFor(model => model.DepartmenName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DepartmenName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-left: 15px; margin-right: 15px;">
+            <label class="" style="margin-left: 12px;"><b>Fakülte İsmi:</b></label>
+            <div class="col-md-12">
+                @Html.DropDownList("FacultyID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FacultyID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-left: 15px;">
+            <div class="col-md-offset-2 col-md-12">
+                <input type="submit" value="Ekle" class="btn btn-success" />
+                <a class="btn btn-warning" href="/Departments/Index" role="button">Geri Dön</a>
+            </div>
+        </div>
+    </div>
+}
